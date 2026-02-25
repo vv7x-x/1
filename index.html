@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="بوابة نحو العمق — رواية نفسية تأخذك إلى ما وراء الوعي">
+    <title>البوابة — رواية نفسية</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- Import maps polyfill for older browsers -->
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+
+    <!-- Three.js Modern Module Setup (r158) -->
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <span class="loading-text">جارٍ فتح البوابة...</span>
+            <div class="loading-bar-container">
+                <div class="loading-bar" id="loadingBar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Three.js Canvas Container -->
+    <div id="canvas-container"></div>
+
+    <!-- Main UI Overlay -->
+    <div class="ui-overlay" id="uiOverlay">
+        <div class="title-section" id="titleSection">
+            <h1 class="title-main">البوابة</h1>
+            <p class="title-sub">لا شيء يبقى كما كان بعد الدخول</p>
+        </div>
+        <button class="enter-btn" id="enterBtn">ادخل</button>
+    </div>
+
+    <!-- Download Section (hidden initially) -->
+    <div class="download-section" id="downloadSection">
+        <h2 class="download-title">وصلت</h2>
+        <p class="download-subtitle">الرواية بين يديك الآن</p>
+        <a href="assets/التي لم تكن.pdf" download class="download-btn" id="downloadBtn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-6 2h12v2H6v-2z" />
+            </svg>
+            تحميل الرواية
+        </a>
+        <button class="back-btn" id="backBtn">العودة</button>
+    </div>
+
+    <!-- Sound Toggle -->
+    <button class="sound-toggle" id="soundToggle" aria-label="تبديل الصوت">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="soundIcon">
+            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
+        </svg>
+    </button>
+
+    <!-- Main Script (Module) -->
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
